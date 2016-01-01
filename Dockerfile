@@ -23,6 +23,7 @@ RUN mkdir -p /etc/caddy && \
     adduser -SD -h /etc/caddy -s /sbin/nologin caddy
 
 VOLUME /etc/caddy
+VOLUME /etc/ssl/caddy
 VOLUME /var/www
 
 COPY Caddyfile /etc/caddy/
