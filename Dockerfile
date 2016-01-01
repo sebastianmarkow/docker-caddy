@@ -20,7 +20,7 @@ RUN mkdir /tmp/caddy && \
     rm -rf /tmp/caddy
 
 RUN mkdir -p /etc/caddy && \
-    adduser -D -h /etc/caddy -u 1000 -s /sbin/nologin caddy
+    adduser -SD -h /etc/caddy -s /sbin/nologin caddy
 
 VOLUME /etc/caddy
 VOLUME /var/www
