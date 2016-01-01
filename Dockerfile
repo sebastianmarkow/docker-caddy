@@ -27,10 +27,10 @@ VOLUME /var/www
 
 COPY Caddyfile /etc/caddy/
 
-EXPOSE 80 443
-
 USER caddy
 WORKDIR /var/www
 
-CMD ["-conf=/etc/caddy/Caddyfile"]
+EXPOSE 80 443
+
 ENTRYPOINT ["/usr/bin/caddy", "-agree"]
+CMD ["-conf=/etc/caddy/Caddyfile"]
